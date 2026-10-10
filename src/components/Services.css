@@ -1,0 +1,20 @@
+.services-section { background: white; }
+.section-heading { max-width: 690px; margin: 0 auto 48px; text-align: center; }
+.section-kicker { color: var(--primary); text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; font-weight: 850; }
+.section-heading h2 { margin: 14px 0; font-size: clamp(2.1rem, 4vw, 3.3rem); line-height: 1.12; letter-spacing: -.06em; }
+.section-heading h2 span { color: var(--primary); }
+.section-heading > p { max-width: 590px; margin: 0 auto; color: var(--muted); line-height: 1.8; }
+.services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.service-card { display: flex; flex-direction: column; min-height: 290px; padding: 27px; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.service-card:hover { transform: translateY(-6px); border-color: #d7d6ff; box-shadow: 0 22px 45px #25245e0d; }
+.service-card-top { display: flex; align-items: center; justify-content: space-between; }
+.service-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: #f0efff; color: var(--primary); font-size: 1.45rem; }
+.service-number { color: #a1a5b5; font-size: .75rem; font-weight: 800; }
+.service-card h3 { margin: 24px 0 10px; font-size: 1.15rem; letter-spacing: -.025em; }
+.service-card > p { margin: 0 0 18px; color: var(--muted); font-size: .9rem; line-height: 1.75; }
+.service-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 22px; }
+.service-tags span { padding: 6px 9px; border-radius: 6px; background: #f5f6fa; color: #5b6172; font-size: .68rem; font-weight: 700; }
+.service-link { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border); font-size: .82rem; font-weight: 750; }
+.service-link span { color: var(--primary); font-size: 1rem; }
+@media (max-width: 800px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } .service-card { min-height: auto; } .section-heading { margin-bottom: 32px; } }

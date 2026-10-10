@@ -1,0 +1,50 @@
+.hero { position: relative; overflow: hidden; padding-top: clamp(70px, 9vw, 118px); padding-bottom: clamp(70px, 9vw, 120px); }
+.hero::before { content: ""; position: absolute; z-index: -1; width: 560px; height: 560px; right: -170px; top: 30px; border-radius: 50%; background: radial-gradient(circle, #e4e7ff 0, #f7f8ff 55%, transparent 72%); }
+.hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: clamp(35px, 6vw, 80px); }
+.eyebrow { display: inline-flex; align-items: center; gap: 9px; padding: 9px 13px; border: 1px solid #e0e4ff; border-radius: 99px; color: #4f46b8; background: #f1f2ff; font-size: .78rem; font-weight: 750; letter-spacing: .02em; }
+.eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: #6860ed; box-shadow: 0 0 0 4px #dfe0ff; }
+.hero h1 { max-width: 680px; margin: 25px 0 22px; font-size: clamp(3rem, 5.7vw, 5.25rem); line-height: 1.02; letter-spacing: -.075em; font-weight: 850; }
+.hero h1 span { color: var(--primary); }
+.hero-lead { max-width: 525px; margin: 0; color: var(--muted); font-size: clamp(1rem, 1.4vw, 1.12rem); line-height: 1.85; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 26px; margin-top: 30px; }
+.text-link { font-size: .94rem; font-weight: 750; }
+.text-link span { display: inline-block; margin-left: 5px; transition: transform .2s ease; }
+.text-link:hover span { transform: translateX(4px); }
+.hero-proof { display: flex; align-items: center; gap: 14px; margin-top: 46px; padding-top: 25px; border-top: 1px solid var(--border); max-width: 440px; }
+.avatar-stack { display: flex; padding-left: 5px; }
+.avatar-stack span { display: grid; place-items: center; width: 34px; height: 34px; margin-left: -5px; border: 2px solid white; border-radius: 50%; background: #dfe2ff; color: #4540a1; font-size: .58rem; font-weight: 800; }
+.avatar-stack span:nth-child(2) { background: #f8dec8; color: #8a4a24; }
+.avatar-stack span:nth-child(3) { background: #d7eee4; color: #246b50; }
+.hero-proof p { margin: 0; color: var(--ink); font-size: .8rem; line-height: 1.7; }
+.hero-proof p span { color: var(--muted); }
+.hero-art { position: relative; display: grid; place-items: center; min-height: 450px; isolation: isolate; }
+.art-orbit { position: absolute; z-index: -1; border: 1px solid #dfe2ff; border-radius: 50%; transform: rotate(-25deg); }
+.orbit-one { width: 430px; height: 330px; }
+.orbit-two { width: 370px; height: 450px; transform: rotate(35deg); }
+.art-card { width: min(100%, 410px); padding: 15px; border: 1px solid #ffffff; border-radius: 21px; background: #ffffffd9; box-shadow: 0 28px 80px #30346b20; transform: rotate(-3deg); animation: float-in .7s ease both; }
+.art-card-top, .art-card-bottom { display: flex; justify-content: space-between; align-items: center; gap: 8px; color: #62677a; font-size: .68rem; }
+.art-card-top { padding: 4px 3px 15px; }
+.mini-brand { display: flex; align-items: center; gap: 7px; color: var(--ink); font-weight: 800; }
+.mini-brand i { width: 8px; height: 8px; border-radius: 3px; background: var(--primary); }
+.live-pill { padding: 6px 8px; border-radius: 99px; background: #eaf8ef; color: #21834b; font-size: .6rem; }
+.art-gradient { position: relative; display: flex; align-items: flex-end; min-height: 285px; overflow: hidden; padding: 25px; border-radius: 13px; color: white; background: linear-gradient(140deg, #3f3a9c 0%, #7773e9 48%, #e6a8b8 100%); }
+.art-gradient::before { content: ""; position: absolute; width: 260px; height: 260px; right: -50px; top: -65px; border: 1px solid #ffffff80; border-radius: 50%; box-shadow: 0 0 0 22px #ffffff0c, 0 0 0 45px #ffffff0c; }
+.art-gradient > span { position: relative; z-index: 1; font-size: clamp(2rem, 3.4vw, 2.8rem); line-height: 1.03; font-weight: 800; letter-spacing: -.06em; }
+.art-gradient em { font-family: Georgia, serif; font-weight: 400; }
+.art-sun { position: absolute; top: 42px; right: 45px; width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg, #ffe7ba, #f4b5c7); box-shadow: 0 0 50px #ffc7d7a8; }
+.art-card-bottom { padding: 14px 3px 2px; }
+.float-note { position: absolute; display: flex; align-items: center; gap: 11px; padding: 13px 15px; border: 1px solid #fff; border-radius: 14px; background: #ffffffed; box-shadow: 0 14px 40px #30346b1c; animation: float-y 5s ease-in-out infinite; }
+.float-note strong, .float-note small { display: block; }
+.float-note strong { color: var(--ink); font-size: .75rem; }
+.float-note small { margin-top: 4px; color: var(--muted); font-size: .65rem; }
+.note-icon, .check-icon { display: grid; place-items: center; width: 35px; height: 35px; border-radius: 10px; background: #f0edff; color: #6656d9; font-size: 1.2rem; }
+.check-icon { background: #e6f8ed; color: #16844a; font-weight: 800; }
+.note-top { top: 42px; right: -10px; }
+.note-bottom { bottom: 35px; left: -20px; animation-delay: -2.5s; }
+.art-spark { position: absolute; color: #7a71ed; }
+.spark-one { top: 12px; left: 15%; font-size: 2rem; }
+.spark-two { right: 5%; bottom: 75px; font-size: 1.5rem; }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr 0.9fr; gap: 28px; } .hero h1 { font-size: clamp(2.8rem, 6vw, 4.2rem); } .hero-art { min-height: 380px; } .art-gradient { min-height: 245px; } .note-top { right: -4px; } .note-bottom { left: -8px; } }
+@media (max-width: 700px) { .hero { padding-top: 65px; } .hero-grid { grid-template-columns: 1fr; gap: 30px; } .hero-copy { text-align: center; } .hero h1 { max-width: 580px; margin-left: auto; margin-right: auto; font-size: clamp(2.7rem, 9vw, 4.3rem); } .hero-lead { margin-inline: auto; } .hero-actions, .hero-proof { justify-content: center; } .hero-proof { margin-inline: auto; text-align: left; } .hero-art { width: 100%; max-width: 500px; min-height: 390px; margin: 0 auto; } .art-card { max-width: 380px; } .note-top { right: 0; } .note-bottom { left: 0; } }
+@media (max-width: 420px) { .hero h1 { font-size: 2.65rem; } .hero-actions { gap: 18px; } .hero-art { min-height: 340px; } .art-gradient { min-height: 215px; padding: 18px; } .art-gradient > span { font-size: 2rem; } .art-sun { width: 65px; height: 65px; right: 25px; } .float-note { padding: 10px; } .orbit-one { width: 310px; height: 270px; } .orbit-two { width: 290px; height: 340px; } }
+@media (prefers-reduced-motion: reduce) { .art-card, .float-note { animation: none; } }

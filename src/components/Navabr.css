@@ -1,0 +1,29 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, .92);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+}
+.navbar { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-size: 1.35rem; font-weight: 850; letter-spacing: -.06em; white-space: nowrap; }
+.brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: white; background: var(--primary); letter-spacing: 0; box-shadow: 0 8px 18px #4f46e533; }
+.brand-accent { color: var(--primary); }
+.nav-links { display: flex; align-items: center; gap: clamp(18px, 2.5vw, 34px); list-style: none; padding: 0; margin: 0; }
+.nav-links a { color: var(--muted); font-size: .93rem; font-weight: 600; transition: color .2s ease; }
+.nav-links a:hover, .nav-links a:focus-visible { color: var(--primary); }
+.menu-toggle { display: none; }
+@media (max-width: 760px) {
+  .navbar { min-height: 70px; gap: 12px; }
+  .menu-toggle { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 42px; height: 42px; padding: 10px; border: 1px solid var(--border); border-radius: 10px; background: white; cursor: pointer; order: 3; }
+  .menu-toggle span { width: 100%; height: 2px; border-radius: 3px; background: var(--ink); transition: transform .2s ease, opacity .2s ease; }
+  .menu-toggle.is-open span:first-child { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle.is-open span:nth-child(2) { opacity: 0; }
+  .menu-toggle.is-open span:last-child { transform: translateY(-7px) rotate(-45deg); }
+  .nav-cta { margin-left: auto; }
+  .nav-links { position: absolute; top: 69px; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 10px 22px 18px; background: white; border-bottom: 1px solid var(--border); box-shadow: 0 18px 28px #0f172a0d; }
+  .nav-links.is-open { display: flex; animation: slide-down .2s ease both; }
+  .nav-links a { display: block; padding: 13px 4px; }
+}
+@media (max-width: 400px) { .brand { font-size: 1.1rem; gap: 7px; } .brand-mark { width: 33px; height: 33px; } .nav-cta { padding: 10px 12px; } }
